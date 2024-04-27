@@ -1,0 +1,412 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cedarville+Cursive&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 4px;
+    font-weight: 600;
+}
+
+nav {
+    width: 100%;
+    max-height: 80px;
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    height: 80px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding: 0 20px;
+}
+
+.nutribump_logo {
+    height: 30px;
+}
+
+.nutribump_ul_container ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+}
+
+.nutribump_menu_profile li {
+    display: none;
+}
+
+.nutribump_ul_container ul li {
+    padding: 0 20px;
+    position: relative;
+}
+
+.nutribump_ul_container ul li:hover {
+    cursor: pointer;
+    color: #f084d4;
+}
+
+.nutribump_ul_container ul li::before {
+    transition: 400ms;
+    height: 4px;
+    content: "";
+    position: absolute;
+    background-color: #f084d4;
+}
+
+
+.nutribump_menu li.active {
+    color: #f084d4;
+}
+
+.nutribump_logo img {
+    height: 100%;
+}
+
+.nutribump_profile_search {
+    display: flex;
+    align-items: center;
+}
+
+.nutribump_profile_search input {
+    display: none;
+}
+
+.nutribump_search {
+    height: 20px;
+}
+
+.nutribump_search img {
+    height: 20px;
+    margin: 0 8px;
+}
+
+.hamburger-menu-search-container {
+    display: none;
+}
+
+.ham-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nutribump_search {
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 2px;
+    background-color: #333;
+    margin: 4px 0;
+}
+
+
+
+.nutribump_search_mobile {
+    margin-right: 15px;
+}
+
+.nutribump_search_mobile {
+    width: 15px;
+}
+
+.nutribump_search_mobile img {
+    width: 100%;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.79);
+    z-index: 1;
+    /* Lower z-index value */
+}
+
+.searchpopup_search {
+    display: flex;
+    align-items: center;
+}
+
+.search-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    width: 50%;
+    z-index: 1000;
+    /* Ensure it's above other elements */
+    display: none;
+    /* Hide it by default */
+}
+
+.search-popup input[type="text"] {
+    margin: 0 auto;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid #f084d4;
+    /* Only bottom border */
+    outline: none;
+    color: #fff;
+    background-color: transparent;
+    font-size: 16px;
+}
+
+.search-popup input[type="text"]::placeholder {
+    color: #fff;
+    opacity: 0.7;
+    font-size: 15px;
+}
+
+.search-popup input[type="text"]:focus {
+    border-bottom-color: #f084d4;
+    /* Change color on focus if needed */
+}
+
+.close {
+    color: #fff !important;
+    font-size: 30px !important;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+
+/* main div container */
+
+.main-container {
+    height: 100vh;
+    height: 80vh;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+ 
+ 
+
+.main_container_elements {
+    text-align: center; /* Center content inside this div */
+}
+
+.logo_container {
+    display: inline-block;
+    margin: 0 auto;
+    width: 200px;
+}
+
+.logo_container img {
+    width: 100%;
+}
+
+.nutribump_main_text-container p {
+    font-size: 70px;
+    font-weight: 700;
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    line-height: 5rem;
+    color: #fff;
+}
+
+.explore_btn {
+    text-align: center;
+    display: inline-flex; /* Use flexbox layout for button content */
+    align-items: center; /* Center items vertically */
+    position: relative;
+    background-color: #f084d4; /* Material UI primary color */
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+
+    font-family: "Bebas Neue", sans-serif;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    overflow: hidden; 
+  }
+  
+  .explore_btn::after {
+    content: '➜';  
+    margin-left: 5px;  
+    opacity: 0;   
+    transition: opacity 0.3s;  
+  }
+  
+  .explore_btn:hover::after {
+    opacity: 1;
+  }
+  
+  .explore_btn:hover {
+    background-color: #f040c1;  
+    cursor: pointer;
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
+  }
+  
+
+@media screen and (max-width: 768px) {
+
+    /* navbar */
+
+    .nutribump_ul_container ul {
+        display: none;
+    }
+
+    .hamburger-menu-search-container {
+        display: block;
+    }
+
+    .nutribump_profile_search {
+        display: none;
+    }
+
+    .nutribump_ul_container.show ul {
+        display: flex;
+    }
+
+    .nutribump_ul_container {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: #fff;
+        width: 100%;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .nutribump_ul_container ul {
+        flex-direction: column;
+    }
+
+    .nutribump_ul_container ul li {
+        padding: 10px;
+    }
+
+    .close {
+        color: #fff !important;
+        font-size: 15px !important;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+
+
+@media screen and (max-width: 900px) {
+
+    .main-container {
+        display: flex;
+        align-items: center;  
+        height: 100vh; 
+    }
+    
+    .main_container_elements {
+        text-align: left;  
+        padding: 20px;  
+    }
+    
+    
+    .logo_container {
+        display: none;
+    }
+    
+    .logo_container img {
+        width: 100%;
+    }
+    
+    .nutribump_main_text-container p {
+        font-size: 50px;
+        font-weight: 700;
+        text-align: left;
+        line-height: 4rem;
+        color: #fff;
+    }
+    
+    .explore_btn {
+        display: inline-flex; /* Use flexbox layout for button content */
+        align-items: center; /* Center items vertically */
+        position: relative;
+        margin-top: 10px;
+        background-color: #f084d4; /* Material UI primary color */
+        color: white;
+        border: none;
+        padding: 15px 25px;
+        border-radius: 5px;
+        font-size: 15px;
+        transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        overflow: hidden; 
+      }
+      
+      .explore_btn::after {
+        content: '➜';  
+        margin-left: 5px;  
+        opacity: 0;   
+        transition: opacity 0.3s;  
+      }
+      
+      .explore_btn:hover::after {
+        opacity: 1;
+      }
+      
+      .explore_btn:hover {
+        background-color: #f040c1;  
+        cursor: pointer;
+        transform: scale(1.05); 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
+      }
+}
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
